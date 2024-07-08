@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot'
+    id 'io.spring.dependency-management'
+}
+
+group = 'org.delivery'
+version = '1.0-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+configurations {
+    compileOnly { // 컴파일할 때 어노테이션을 사용한다 의미
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':db') // 같은 레벨의 다른 모듈을 사용하겠다
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok' // 어노테이션 사용하기 때문
+    implementation 'org.springframework.boot:spring-boot-starter-web' // starter-web과 test는 세트
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+bootJar{
+    enabled=true
+}
+
+jar{
+    enabled=false
+}
