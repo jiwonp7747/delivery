@@ -10,3 +10,4 @@
 2. Swagger ui 사용 위한 의존성 추가
 3. Custom object mapper 사용위한 SwaggerConfig 생성
 4. Filter를 통해 응답 데이터가 넘어가기 전 로그 확인 기능 구현
+5. 공통 스펙 api 설정하여 응답 정보를 커스텀 
