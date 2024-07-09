@@ -9,3 +9,4 @@
 1. 응답 객체 AccountMeResponse 생성 및 Custom ObjectMapper 생성하여 Json 변환 시 snake case로 반환
 2. Swagger ui 사용 위한 의존성 추가
 3. Custom object mapper 사용위한 SwaggerConfig 생성
+4. Filter를 통해 응답 데이터가 넘어가기 전 로그 확인 기능 구현
