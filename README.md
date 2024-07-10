@@ -11,3 +11,7 @@
 3. Custom object mapper 사용위한 SwaggerConfig 생성
 4. Filter를 통해 응답 데이터가 넘어가기 전 로그 확인 기능 구현
 5. 공통 스펙 api 설정하여 응답 정보를 커스텀 
+
+2024/07/10
+1. Api 에러 코드 추가
+2. ExceptionHandler 스택 트레이스 로그 수집, 오류 응답 처리
