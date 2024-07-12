@@ -17,3 +17,7 @@
 2. ExceptionHandler 스택 트레이스 로그 수집, 오류 응답 처리 
 3. Api Controller에 대한 Api Exception 작성 (추상화) 및 해당 예외 다루는 Api ExceptionHandler 작성 (우선순위 핸들러)
 4. 추후 인증을 위한 인터셉터 기반, WebConfig를 통한 인증 Api 분류
+
+2024/07/12
+1. UserEntity 추가, UserRepository
+2. 상태 enums 추가
