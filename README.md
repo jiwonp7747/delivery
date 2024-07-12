@@ -21,3 +21,8 @@
 2024/07/12
 1. UserEntity 추가, UserRepository
 2. 상태 enums 추가
+
+2024/07/13
+1. UserOpenApiController, UserBusiness, UserService, UserConverter 로직 구현
+2. 사용자 등록 요청 UserRegisterRequest, 그에 대한 응답 UserResponse 구현
+로직 흐름 Controller -> Business -> Service -> Repository
