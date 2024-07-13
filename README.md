@@ -26,3 +26,6 @@
 1. UserOpenApiController, UserBusiness, UserService, UserConverter 로직 구현
 2. 사용자 등록 요청 UserRegisterRequest, 그에 대한 응답 UserResponse 구현
 로직 흐름 Controller -> Business -> Service -> Repository
+
+2024/07/14
+1. 토큰 생성, 검증 로직 추가 
