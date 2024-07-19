@@ -18,6 +18,13 @@ public class UserOrderService {
 
     private final UserOrderRepository userOrderRepository;
 
+    public UserOrderEntity getUserOrderWithoutStatusWithThrow(
+            Long id, Long userId
+    ){
+        Optional<UserOrderEntity> entity=userOrderRepository.findAllByIdAndUserId(id, userId);
+        return entity.orElseThrow(()->new ApiException(ErrorCode.NULL_POINT));
+    }
+
     // 특정 주문 하나 가져오기
     public UserOrderEntity getUserOrderWithThrow(Long id, Long userId) {
         Optional<UserOrderEntity> entity=userOrderRepository.findByIdAndUserIdAndStatus(id, userId, UserOrderStatus.REGISTERED);

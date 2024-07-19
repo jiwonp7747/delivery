@@ -43,7 +43,7 @@ public class JwtTokenHelper implements TokenHelperIfs { // Jwt 토큰을 검증�
         // JWT는 헤더, 페이로드, 서명(Signature) 로 구성된다.
 
         String jwtToken= Jwts.builder() // 토큰 생성
-                .signWith(key, SignatureAlgorithm.HS256) // 토큰의 서명 설정
+                .signWith(key, SignatureAlgorithm.HS256) // 서명 생성
                 .setClaims(data) // 데이터를 클레임으로 설정, 클레임은 JWT 페이로드에 포함되는 정보, 사용자 식별 정보, 권한, 기타 메타데이터 포함
                 .setExpiration(expiredAt) // JWT의 만료시간을 설정
                 .compact();
