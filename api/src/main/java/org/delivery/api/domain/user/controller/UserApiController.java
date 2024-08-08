@@ -1,5 +1,6 @@
 package org.delivery.api.domain.user.controller;
 
+import io.swagger.v3.oas.annotations.Parameter;
 import lombok.RequiredArgsConstructor;
 import org.delivery.api.common.anotation.UserSession;
 import org.delivery.api.common.api.Api;
@@ -23,7 +24,7 @@ public class UserApiController { // 로그인된 사용자에 대해 처리하�
 
     @GetMapping("/me")
     public Api<UserResponse> me(
-            @UserSession User user
+            @Parameter(hidden = true) @UserSession User user
     ){ // 로그인 했을 때 나의 정보를 가져가는 코드
 
         //reuqestContext는 request가 들어올 때마다 생성
