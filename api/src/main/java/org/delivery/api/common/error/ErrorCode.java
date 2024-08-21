@@ -24,19 +24,4 @@ public enum ErrorCode implements ErrorCodeIfs{ //enum클래스는 상속 x
     private final Integer errorCode; //내부 코드
 
     private final String description;
-
-   /* @Override
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    @Override
-    public Integer getErrorCode() {
-        return this.errorCode;
-    }
-
-    @Override
-    public String getDescription() {
-        return this.description;
-    }*/
 }
